@@ -1,5 +1,5 @@
 import React from 'react';
-import { brand } from "../../Assets/brand.png";
+import  brand  from "../../Assets/brand.png";
 
 
 function Brand() {

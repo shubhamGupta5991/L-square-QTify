@@ -1,6 +1,6 @@
 import React from 'react'
 import {ReactComponent as SearchIcon} from '../../Assets/icon.svg'
-import styles from '../../Component/Search_bar/Search_bar.css'
+import styles from './Search_Bar.css'
 
 
 function Search({placeholder}) {
