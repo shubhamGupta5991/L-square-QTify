@@ -1,20 +1,21 @@
-.search{
-    border-radius: 8px 0 0 8px ;
-    border: 1px solid var(--color-black);
-    /* width: 568px; */
-    padding: 14px 20px;
-}
-
 .parent{
+    width: 568px;
+    height: 48px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    height: 48px;
+    border: none;
+    outline: none;
 }
-.search_button{
+
+.parent input{
+    width: 493px;
+    height: 45px;
+    border-radius: 8px 0 0 8px;
+    padding: 0 0 0 8px;
+}
+.parent button{
+    width: 66px;
+    height: 48px;
     border-radius: 0 8px 8px 0;
-    padding: 14px 20px;
-    border: 1px solid;
-    border-left: none;
-    cursor: pointer;
-    height: 100%;
 }
