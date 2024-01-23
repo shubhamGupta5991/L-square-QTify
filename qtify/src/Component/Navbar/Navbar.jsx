@@ -3,13 +3,14 @@ import Brand from '../Brand_icon/Brand';
 import Search from '../Search_bar/Search';
 import Button from '../Button/Button';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 function Navbar() {
 
   return (
     <nav className='navbar'>
-      <a href="/">
+      <Link to="/">
       <Brand/>
-      </a>
+      </Link>
       
       <Search placeholder='Search an album of your choice'/>
       <Button>Give Feedback</Button>
