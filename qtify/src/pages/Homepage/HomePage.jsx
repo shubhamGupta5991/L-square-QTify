@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../../Component/hero_section/Hero'
 import Section from '../../Component/Section/Section'
-import { useOutlet, useOutletContext } from 'react-router-dom'
+import {  useOutletContext } from 'react-router-dom'
  
 const HomePage = () => {
     const {data} = useOutletContext();
