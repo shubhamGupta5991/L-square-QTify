@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Carousel.css'
-import Swiper, { Navigation } from 'swiper'
-import {useSwiper, SwiperSlide} from 'swiper/react'
+import  { Navigation, } from 'swiper'
+import {Swiper,useSwiper, SwiperSlide} from 'swiper/react'
 import LeftCarousel from './CarouselNavigation/LeftCarousel/LeftCarousel'
 import RightCarousel from './CarouselNavigation/RightCarousel/RightCarousel'
 import 'swiper/css'
@@ -13,6 +13,7 @@ const Control = ({data})=>{
   return <></>
 }
 
+
 const Carousel = ({data,renderComponent}) => {
   return (
     <div className='wrapper'>
@@ -23,6 +24,7 @@ const Carousel = ({data,renderComponent}) => {
       slidesPerView={'auto'}
       spaceBetween = {40}
       allowTouchMove
+      
       >
           <Control data={data}/>
         <LeftCarousel/>

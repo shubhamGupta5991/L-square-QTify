@@ -5,14 +5,17 @@ import {  useOutletContext } from 'react-router-dom'
  
 const HomePage = () => {
     const {data} = useOutletContext();
-    const {topAlbums,newAlbums} = data;
+    const {topAlbum,newAlbum} = data;
+    // console.log(topAlbums(),'topAlbums');
+    // console.log(data);
+    // console.log(newAlbum);
   return (
     <div>
         <Hero/>
-        <Section title='Top Albums' data={topAlbums} type='album'/>
-        <Section title='New Albums' data={newAlbums} type='album'/>
+        <Section title='Top Albums' data={topAlbum} type='album'/>
+        <Section title='New Albums' data={newAlbum} type='album'/>
     </div>
   )
 }
 
-export default HomePage
+export default HomePage;

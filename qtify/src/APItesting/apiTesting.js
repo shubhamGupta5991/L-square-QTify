@@ -6,10 +6,12 @@ export const BackendApi = 'https://qtify-backend-labs.crio.do';
 export const topAlbums = async ()=>{
     try{
         const response =await axios.get( `${BackendApi}/albums/top`)
+        // console.log(response.data);
         return response.data;
 
     }catch(e){
         console.log(e)
+        return null;
     }
 }
 // console.log(topAlbums());

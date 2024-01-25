@@ -12,7 +12,7 @@ const Section = ({data,title,type}) => {
     const toggleButton=()=>{
         setToggle(!toggle)
     }
-    // console.log(data);
+    // console.log(data,'data');
     
   return (
     <div>
@@ -25,7 +25,7 @@ const Section = ({data,title,type}) => {
             {!toggle?
                 (<div className='wrapper'>
                     {data.map((e)=>(
-                        <Card data={e} type={type}/>
+                        <Card data={e} type={type} key={e.id}/>
                     ))}
                 </div>)
             :(<Carousel data= {data} renderComponent={(data)=> <Card data={data} type={type}/>}/>)}
