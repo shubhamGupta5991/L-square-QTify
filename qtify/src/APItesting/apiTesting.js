@@ -1,20 +1,21 @@
 
 import axios from 'axios'
 
-export const backendApi = 'https://qtify-backend-labs.crio.do';
+export const BackendApi = 'https://qtify-backend-labs.crio.do';
 
 export const topAlbums = async ()=>{
     try{
-        const response =await axios.get( `${backendApi}/albums/top`)
+        const response =await axios.get( `${BackendApi}/albums/top`)
         return response.data;
 
     }catch(e){
         console.log(e)
     }
 }
+// console.log(topAlbums());
 export const newAlbums = async ()=>{
     try{
-        const response =await axios.get( `${backendApi}/albums/new`)
+        const response =await axios.get( `${BackendApi}/albums/new`)
         return response.data;
 
     }catch(e){
@@ -23,7 +24,7 @@ export const newAlbums = async ()=>{
 }
 export const songs = async ()=>{
     try{
-        const response =await axios.get( `${backendApi}/songs`)
+        const response =await axios.get( `${BackendApi}/songs`)
         return response.data;
 
     }catch(e){
@@ -32,7 +33,7 @@ export const songs = async ()=>{
 }
 export const filters = async ()=>{
     try{
-        const response =await axios.get( `${backendApi}/genres`)
+        const response =await axios.get( `${BackendApi}/genres`)
         // console.log(response);
         return response.data;
 

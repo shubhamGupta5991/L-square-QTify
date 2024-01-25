@@ -6,11 +6,13 @@ import Card from '../Card/Cards';
 
 
 const Section = ({data,title,type}) => {
+    // console.log(data,title,type);
     const [toggle,setToggle] = useState(true)
 
     const toggleButton=()=>{
-        setToggle(prev=>!prev)
+        setToggle(!toggle)
     }
+    // console.log(data);
     
   return (
     <div>
@@ -18,14 +20,14 @@ const Section = ({data,title,type}) => {
         <h3>{title}</h3>
         <h4 onClick={toggleButton} className='toggle'>{!toggle?'Collapse': 'Show All'}</h4>
     </div>
-    {data.length === 0 ? (<CircularProgress/>) : (
+    {(data.length === 0) ? (<CircularProgress/>) : (
         <div className='cardWrap'>
             {!toggle?
-                <div className='wrapper'>
+                (<div className='wrapper'>
                     {data.map((e)=>(
                         <Card data={e} type={type}/>
                     ))}
-                </div>
+                </div>)
             :(<Carousel data= {data} renderComponent={(data)=> <Card data={data} type={type}/>}/>)}
         </div>
     ) }
