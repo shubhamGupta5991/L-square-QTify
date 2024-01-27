@@ -5,8 +5,7 @@ export const BackendApi = 'https://qtify-backend-labs.crio.do';
 
 export const topAlbums = async ()=>{
     try{
-        const response =await axios.get( `${BackendApi}/albums/top`)
-        // console.log(response.data);
+        const response =await axios.get( `${BackendApi}/albums/top`);
         return response.data;
 
     }catch(e){
@@ -14,10 +13,11 @@ export const topAlbums = async ()=>{
         return null;
     }
 }
-// console.log(topAlbums());
+
 export const newAlbums = async ()=>{
     try{
-        const response =await axios.get( `${BackendApi}/albums/new`)
+        const response =await axios.get( `${BackendApi}/albums/new`);
+        console.log(response.data[0].songs);
         return response.data;
 
     }catch(e){
@@ -26,21 +26,12 @@ export const newAlbums = async ()=>{
 }
 export const songs = async ()=>{
     try{
-        const response =await axios.get( `${BackendApi}/songs`)
-        // console.log(response.data);
+        const response =await axios.get( `${BackendApi}/songs`);
         return response.data;
 
     }catch(e){
         console.log(e)
     }
 }
-export const filters = async ()=>{
-    try{
-        const response =await axios.get( `${BackendApi}/genre`);
-        console.log(response.data[0]);
-        return response.data;
 
-    }catch(e){
-        console.log(e)
-    }
-}
+
