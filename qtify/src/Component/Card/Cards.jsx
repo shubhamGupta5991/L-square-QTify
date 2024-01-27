@@ -8,7 +8,7 @@ const Cards = ({ data, type }) => {
     switch (type) {
       case "album": {
         const { image, title, follows, slug, songs } = data;
-        console.log(songs);
+        // console.log(songs);
 
         return (
           <Tooltip
@@ -37,22 +37,22 @@ const Cards = ({ data, type }) => {
 
       case "song": {
         const { image, title, follows, slug, songs } = data;
-        console.log(songs);
+        // console.log(songs);
 
         return (
           <Tooltip
             title={`${songs.length} songs`}
             placement="top"
-            className="body"
+            className={styles.body}
           >
             <Link to={`/album/${slug}`} className="card">
-              <div className="image">
+              <div className={styles.image}>
                 <img src={image} alt="album" loading="lazy" />
-                <div className="chipParent">
+                <div className={styles.chipParent}>
                   <Chip
                     label={`${follows} follows`}
                     size="small"
-                    className="chip"
+                    className={styles.chip}
                   />
                 </div>
               </div>

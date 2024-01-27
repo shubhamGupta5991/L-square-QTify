@@ -27,7 +27,7 @@ export const newAlbums = async ()=>{
 export const songs = async ()=>{
     try{
         const response =await axios.get( `${BackendApi}/songs`)
-        console.log(response.data);
+        // console.log(response.data);
         return response.data;
 
     }catch(e){
@@ -36,8 +36,8 @@ export const songs = async ()=>{
 }
 export const filters = async ()=>{
     try{
-        const response =await axios.get( `${BackendApi}/genres`);
-        console.log(response.data);
+        const response =await axios.get( `${BackendApi}/genre`);
+        console.log(response.data[0]);
         return response.data;
 
     }catch(e){

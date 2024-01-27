@@ -7,7 +7,7 @@ import Filter from '../Filter/Filter';
 
 
 const Section = ({data,title,type,filterSource}) => {
-    console.log(data,title,type,filterSource);
+    // console.log(filterSource);
     const [toggle,setToggle] = useState(true)
     const [filter, setFilter] = useState([{key:'all', label: 'All'}]);
     const [selectedFilter, setSelectedFilter] = useState(0);

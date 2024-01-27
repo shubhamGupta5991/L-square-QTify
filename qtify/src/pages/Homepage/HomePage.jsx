@@ -8,8 +8,8 @@ const HomePage = () => {
     const {data} = useOutletContext();
     const {topAlbum,newAlbum,song} = data;
     // console.log(topAlbum,'topAlbums');
-    console.log(song);
-    console.log(filters); 
+    // console.log(song);
+    // console.log(filters); 
   return (
     <div>
         <Hero/>
