@@ -50,9 +50,9 @@ export default function BasicTabs({ filteredData }) {
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label='basic tabs' TabIndicatorProps={{
+                <Tabs value={value} onChange={handleChange} aria-label='basic tabs example' TabIndicatorProps={{
                     style: { backgroundColor: "#34c94b" }
-                }} textColor='#ffffff' className={styles.tabs}>
+                }} textColor='#34c94b' className={styles.tabs}>
                     <Tab label="all" {...allyProps(0)} />
                     <Tab label="rock" {...allyProps(1)} />
                     <Tab label="pop" {...allyProps(2)} />

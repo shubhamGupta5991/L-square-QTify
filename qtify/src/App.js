@@ -46,7 +46,7 @@ function App() {
   }
   const filteredData = (val) => {
     generateSongsData(val)
-    // console.log(val + ' filteredData is called from app.js')
+    
   }
 
   const handleChange = (event, newValue) => {
@@ -65,7 +65,7 @@ function App() {
   const generateNewAlbum = async () => {
     try {
       const res = await newAlbums();
-      // console.log(res);
+    
       setNewAlbum(res);
     } catch (error) {
       console.log(error);

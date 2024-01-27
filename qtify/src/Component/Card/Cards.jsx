@@ -70,7 +70,7 @@ const Cards = ({ data, type }) => {
             <div className={styles.image}>
               <img src={image} alt='song' loading='lazy' />
               <div className={styles.chipParent}>
-                <div className={styles.chip}>
+                <div className={styles.chipLikes}>
                   <p>{likes} Likes</p>
                 </div>
               </div>

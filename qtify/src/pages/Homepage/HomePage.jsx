@@ -8,6 +8,7 @@ import FilterSection from '../../Component/Filter/Filter'
 const HomePage = () => {
     const {data} = useOutletContext();
     const {topAlbum,newAlbum,song,filteredDataValues,handleChange,filteredData,value,handleToggle} = data;
+    // console.log(song);
   
   return (
     <div>
