@@ -1,0 +1,59 @@
+
+
+/* .body{
+   margin-top: 16px;
+} */
+
+.card{
+    /* display: block; */
+    width: 159px;
+    height: 232px;
+    border-radius: 10px;
+}
+ .chipParent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    background-color: white;
+    /* color: white; */
+    display: flex;
+    align-items: center;
+    padding: 6px;
+   
+}
+.chip{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 6px;
+}
+ .image{
+    position: relative;
+    width: 160px;
+    height: 205px;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: contain;
+    img{
+        width: 160px;
+        height: 205px;
+    
+    }
+}
+
+
+.contents{
+    /* margin-top: 6px; */
+
+    text-overflow: ellipsis;
+    width: 130px;
+    height: 31px;
+    p{
+        color: white;
+        text-align: center;
+        width: 160px;
+        height: 50px;
+    }
+}

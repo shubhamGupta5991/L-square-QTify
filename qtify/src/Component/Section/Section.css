@@ -4,7 +4,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
+    /* height: 286px; */
+    gap: 40px;
+    margin-top: 16px;
     
+}
+.head h3{
+    color: white;
 }
 .toggle{
     cursor: pointer;
@@ -13,6 +20,11 @@
 
 .cardWrap{
     margin-top: 18px;
+   
+}
+
+.filterWrapper{
+    margin-top: 15px;
 }
 
 .wrapper{

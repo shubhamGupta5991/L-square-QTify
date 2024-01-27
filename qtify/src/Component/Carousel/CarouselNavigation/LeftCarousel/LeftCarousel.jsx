@@ -10,7 +10,8 @@ const LeftCarousel = () => {
         swiper.on('slideChange', ()=>{
             setIsStart(swiper.isStart)
         })
-    },[])
+    },[swiper])
+    // console.log(swiper.isStart);
   return (
     <div className='navigate_left'>
         {!isStart && <LeftArrow onClick={()=> swiper.slidePrev()}/>}
