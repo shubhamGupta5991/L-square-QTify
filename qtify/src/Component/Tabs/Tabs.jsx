@@ -5,10 +5,10 @@ import Tabs from '@mui/material/Tabs';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import styles from "./Tabs.module.css";
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 
-function CustomTabPanel(props) {
+function TabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
         <div
@@ -27,7 +27,7 @@ function CustomTabPanel(props) {
     )
 }
 
-CustomTabPanel.prototype = {
+TabPanel.prototype = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
@@ -39,20 +39,21 @@ function allyProps(index) {
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
-export default function BasicTabs({ filteredData }) {
+export default function FilterData({ filteredData }) {
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
+        console.log(newValue);
         filteredData(newValue)
         setValue(newValue)
-        //     console.log('new value is ' + newValue)
+    
     }
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label='basic tabs example' TabIndicatorProps={{
+                <Tabs value={value} onChange={handleChange} aria-label='basic tabs' TabIndicatorProps={{
                     style: { backgroundColor: "#34c94b" }
-                }} textColor='#34c94b' className={styles.tabs}>
+                }} textColor='inherit' className={styles.tabs}>
                     <Tab label="all" {...allyProps(0)} />
                     <Tab label="rock" {...allyProps(1)} />
                     <Tab label="pop" {...allyProps(2)} />

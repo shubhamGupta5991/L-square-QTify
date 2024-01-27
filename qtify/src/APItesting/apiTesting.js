@@ -17,7 +17,7 @@ export const topAlbums = async ()=>{
 export const newAlbums = async ()=>{
     try{
         const response =await axios.get( `${BackendApi}/albums/new`);
-        console.log(response.data[0].songs);
+        // console.log(response.data[0].songs);
         return response.data;
 
     }catch(e){

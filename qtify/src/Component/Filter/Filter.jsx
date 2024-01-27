@@ -4,7 +4,7 @@ import { Box, CircularProgress } from '@mui/material';
 import Cards from "../Card/Cards";
 // import CustomTabPanel from '../BasicTabs/BasicTabs'
 import Carousel from "../Carousel/Carousel";
-import Tabs from '../Tabs/Tabs';
+import FilterData from '../Tabs/Tabs';
 
 
 
@@ -23,7 +23,7 @@ const FilterSection = ({
       <div className={styles.header}>
         <h3>{title}</h3>
       </div>
-      <Tabs value={value} handleChange={handleChange} filteredData={filteredData}/>
+      <FilterData value={value} handleChange={handleChange} filteredData={filteredData}/>
       {data.length === 0 ? (
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <CircularProgress />
