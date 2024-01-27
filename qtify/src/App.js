@@ -82,8 +82,8 @@ function App() {
   };
 
   useEffect(() => {
-    setFilteredDataValues(newAlbum);
-  }, [newAlbum,value]);
+    setFilteredDataValues(song);
+  }, [song,value]);
 
   useEffect(() => {
     generatetopAlbum();
